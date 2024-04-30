@@ -1,23 +1,4 @@
-
-//Declaração de variáveis
-//var - let
-
-var nome = "José";
-
-if(nome == "Antonio"){
-    var nome = "Jorge"
-}
-console.log(nome);
-
-
-
-//Declaração de constantes
-// const
-
-
-
 // console.log('Ola Mundo');
-
 
 // var elH1 = document.getElementById('titulo');
 
@@ -43,4 +24,30 @@ console.log(nome);
 
 //     document.body.style.backgroundColor = `#${nrA1}${nrA2}${nrA3}${nrA4}${nrA5}${nrA6}`;
 // });
+
+// EXERCÍCIOS
+
+// Exercício 1 - Declarando Variáveis:
+// Declare três variáveis diferentes (x, y, z) usando var, let e const, respectivamente. Em seguida, imprima o valor de cada variável no console.
+
+var x = 10;
+let y = 20;
+const z = 30;
+console.log(x);
+console.log(y);
+console.log(z);
+
+// Exercício 2 - Tipos de Dados:
+// Declare variáveis representando diferentes tipos de dados (número, string, booleano, array e objeto) e imprima cada uma delas no console.
+
+
+
+// Exercício 3 - Conversão de String para Número:
+// Converta a string "25" em um número e imprima no console.
+
+// Exercício 4 - Conversão de Número para String:
+// Converta o número 30 em uma string e imprima no console.
+
+// Exercício 5 - Conversão para Booleano:
+// Converta o valor 0 para um booleano e imprima no console.
 
