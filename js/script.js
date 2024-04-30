@@ -127,6 +127,10 @@ console.log(numeroe);
 
 // Exercício 4 - Conversão de Número para String:
 // Converta o número 30 em uma string e imprima no console.
+let numeroeStr = 30;
+console.log(numeroeStr.toString());
+
+
 
 // Exercício 5 - Conversão para Booleano:
 // Converta o valor 0 para um booleano e imprima no console.
