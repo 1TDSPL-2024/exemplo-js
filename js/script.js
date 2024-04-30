@@ -98,40 +98,57 @@
 
 // Exercício 1 - Declarando Variáveis:
 // Declare três variáveis diferentes (x, y, z) usando var, let e const, respectivamente. Em seguida, imprima o valor de cada variável no console.
-var x = 10;
-let y = 20;
-const z = 30;
+// var x = 10;
+// let y = 20;
+// const z = 30;
 
-console.log(x);
-console.log(y);
-console.log(z);
+// console.log(x);
+// console.log(y);
+// console.log(z);
 
-// Exercício 2 - Tipos de Dados:
-// Declare variáveis representando diferentes tipos de dados (número, string, booleano, array e objeto) e imprima cada uma delas no console.
-let num = 10;
-let str = "string";
-let bool = true;
-let arr = [1, 2, 3];
-let obj = {nome : "João", idade: 25};
-console.log(num);
-console.log(str);
-console.log(bool);
-console.log(arr);
-console.log(obj);
+// // Exercício 2 - Tipos de Dados:
+// // Declare variáveis representando diferentes tipos de dados (número, string, booleano, array e objeto) e imprima cada uma delas no console.
+// let num = 10;
+// let str = "string";
+// let bool = true;
+// let arr = [1, 2, 3];
+// let obj = {nome : "João", idade: 25};
+// console.log(num);
+// console.log(str);
+// console.log(bool);
+// console.log(arr);
+// console.log(obj);
 
-// Exercício 3 - Conversão de String para Número:
-// Converta a string "25" em um número e imprima no console.
-let strNumero = "25.5";
-let numero = parseFloat(strNumero);
-console.log(numero);
+// // Exercício 3 - Conversão de String para Número:
+// // Converta a string "25" em um número e imprima no console.
+// let strNumero = "25.5";
+// let numero = parseFloat(strNumero);
+// console.log(numero);
 
-// Exercício 4 - Conversão de Número para String:
-// Converta o número 30 em uma string e imprima no console.
-let numeroStr = 30;
-console.log(numeroStr.toString());
+// // Exercício 4 - Conversão de Número para String:
+// // Converta o número 30 em uma string e imprima no console.
+// let numeroStr = 30;
+// console.log(numeroStr.toString());
 
-// Exercício 5 - Conversão para Booleano:
-// Converta o valor 0 para um booleano e imprima no console.
-let valor = 1;
-let booleano = Boolean(valor);
-console.log(booleano);
+// // Exercício 5 - Conversão para Booleano:
+// // Converta o valor 0 para um booleano e imprima no console.
+// let valor = 1;
+// let booleano = Boolean(valor);
+// console.log(booleano);
+
+//MANIPULAÇÃO DO DOM
+//Funçoes
+
+//Declarando funções clássica
+function soma(a, b) {
+  return a + b;
+}
+//Declarando funções anônimas
+ let soma1 = function(a, b) {
+   return a + b;
+ }
+
+//Recuperando o valor da função através de variável e imprimindo!
+let resultado = soma(10, 20);
+console.log(resultado);
+console.log(soma1(2,2));
