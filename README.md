@@ -13,7 +13,7 @@ alterando o conteúdo do documento exibido.
 em protótipos, [tipagem fraca], [dinâmica] e [funções de primeira classe].
 - Possui suporte à [programação funcional] e apresenta recursos como fechamentos e [funções de alta ordem]
 comumente indisponíveis em linguagens populares como [Java] e [C++].
-- É a linguagem de programação mais utilizada do mundo atualmente...
+- É a linguagem de programação mais utilizada do mundo atualment
 
 ## Exemplo:
 - [https://flexboxfroggy.com/](https://flexboxfroggy.com/)
