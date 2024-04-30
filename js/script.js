@@ -26,53 +26,53 @@
 // Tipos de dados em JavaScript:
 
 // Number
-let num = 10;
-console.log(num);
+//let num = 10;
+//console.log(num);
 
 // String
-let str = "Olá, mundo!";
-console.log(str.charAt(0));
-console.log(str.indexOf("Olá"));
+//let str = "Olá, mundo!";
+//console.log(str.charAt(0));
+//console.log(str.indexOf("Olá"));
 
 // Boolean
-let bool = true;
-console.log(bool);
+//let bool = true;
+//console.log(bool);
 
 // Array
-let arr1 = [1, 2, 3, 4, 5];
-let arr2 = [6,7,8,9,10];
-console.log(arr1);
-console.table(arr1);
+//let arr1 = [1, 2, 3, 4, 5];
+//let arr2 = [6,7,8,9,10];
+//console.log(arr1);
+//console.table(arr1);
 // Mesclar Arrays
-let arr3 = arr1.concat(arr2);
-console.log(arr3);
+//let arr3 = arr1.concat(arr2);
+//console.log(arr3);
 // Mesclar Arrays com SPREAD
-let arr4 = [...arr1, ...arr2];
-console.log(arr4);
+//let arr4 = [...arr1, ...arr2];
+//console.log(arr4);
 
 // Object
-let obj = { nome: "João", idade: 25, devedor: true};
-console.log(obj);
-console.table(obj);
-console.log(obj.nome);
-console.log(obj.idade);
-console.log(obj.devedor);
-console.log(obj["nome"]);
+//let obj = { nome: "João", idade: 25, devedor: true};
+//console.log(obj);
+//console.table(obj);
+//console.log(obj.nome);
+//console.log(obj.idade);
+//console.log(obj.devedor);
+//console.log(obj["nome"]);
 //Quero carregar um atributo do objeto utilizando uma variável
-let atributo = "idade";
-console.log("ATRIBUTO VARIADO : " + obj[atributo]);
+//let atributo = "idade";
+//console.log("ATRIBUTO VARIADO : " + obj[atributo]);
 
 //Adicionando um nova propriedade ao objeto OBJ e utilizando o operador SPREAD para preencher
-obj = {...obj, cidade: "São Paulo", estado: "SP"};
-console.log(obj);
+//obj = {...obj, cidade: "São Paulo", estado: "SP"};
+//console.log(obj);
 
 //DESTRUCTURING
-const pessoa = {nome : 'Maria', idade: 34, cidade: 'Florianópolis'};
+//const pessoa = {nome : 'Maria', idade: 34, cidade: 'Florianópolis'};
 
-const {nome, idade, cidade} = pessoa;
-console.log(nome);
-console.log(idade);
-console.log(cidade);
+//const {nome, idade, cidade} = pessoa;
+//console.log(nome);
+//console.log(idade);
+//console.log(cidade);
 
 
 // EXERCÍCIOS
@@ -80,33 +80,51 @@ console.log(cidade);
 // Conversão entre tipos de dados:
 
 // Converter string para número
-let strNumero = "10";
-let numero = parseInt(strNumero);
-console.log(numero); // Saída: 10 (número)
+//let strNumero = "10";
+//let numero = parseInt(strNumero);
+//console.log(numero); // Saída: 10 (número)
 
 // Converter número para string
-let numeroStr = 20;
-let strNumero2 = numeroStr.toString();
-console.log(strNumero2); // Saída: "20" (string)
+//let numeroStr = 20;
+//let strNumero2 = numeroStr.toString();
+//console.log(strNumero2); // Saída: "20" (string)
 
 // Converter para booleano
-let valor = 0;
-let booleano = Boolean(valor);
-console.log(booleano); // Saída: false (0 é considerado false)
+//let valor = 0;
+//let booleano = Boolean(valor);
+//console.log(booleano); // Saída: false (0 é considerado false)
 
 // EXERCÍCIOS
 
 // Exercício 1 - Declarando Variáveis:
 // Declare três variáveis diferentes (x, y, z) usando var, let e const, respectivamente. Em seguida, imprima o valor de cada variável no console.
+    var x =60;
+    const y = 400;
+    let z = 1000; 
 
+    console.log(x)
+    console.log(y)
+    console.log(z)
 // Exercício 2 - Tipos de Dados:
 // Declare variáveis representando diferentes tipos de dados (número, string, booleano, array e objeto) e imprima cada uma delas no console.
+    let Str = "amizade";
+    let boolean = false;
+    let int = 10;
+    let Array = [1, 2, 3, 4];
+    let obj = {nome: "antonio"};
 
 // Exercício 3 - Conversão de String para Número:
 // Converta a string "25" em um número e imprima no console.
+    let num = "25"
+    let numero = parseFloat(num);
+
 
 // Exercício 4 - Conversão de Número para String:
 // Converta o número 30 em uma string e imprima no console.
+    let str = 30;
+    console.log= str.toString(str);
 
 // Exercício 5 - Conversão para Booleano:
 // Converta o valor 0 para um booleano e imprima no console.
+    let v = 0;
+    let bool = Boolean(v);
