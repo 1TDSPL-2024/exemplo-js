@@ -98,15 +98,25 @@ console.log(booleano); // Saída: false (0 é considerado false)
 
 // Exercício 1 - Declarando Variáveis:
 // Declare três variáveis diferentes (x, y, z) usando var, let e const, respectivamente. Em seguida, imprima o valor de cada variável no console.
-var num1 = 1
-let num2 = 2
-const num3 = 3
-console.log(num1)
-console.log(num2)
-console.log(num3)
+var num1 = 1;
+let num2 = 2;
+const num3 = 3;
+console.log(num1);
+console.log(num2);
+console.log(num3);
 
 // Exercício 2 - Tipos de Dados:
 // Declare variáveis representando diferentes tipos de dados (número, string, booleano, array e objeto) e imprima cada uma delas no console.
+var palavra = "palavra";
+var num4 = 4;
+let booleanoe = true;
+let array = [5, 55, 555, 5555];
+let obj2 = { palavra2: "palavra2", numero5: 5};
+console.log(palavra);
+console.log(num4);
+console.log(booleanoe);
+console.log(array);
+console.log(obj2);
 
 // Exercício 3 - Conversão de String para Número:
 // Converta a string "25" em um número e imprima no console.
