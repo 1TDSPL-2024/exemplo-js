@@ -120,6 +120,10 @@ console.log(obj2);
 
 // Exercício 3 - Conversão de String para Número:
 // Converta a string "25" em um número e imprima no console.
+let strNumeroe = "25";
+let numeroe = parseInt(strNumeroe);
+console.log(numeroe);
+
 
 // Exercício 4 - Conversão de Número para String:
 // Converta o número 30 em uma string e imprima no console.
