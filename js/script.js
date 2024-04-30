@@ -134,3 +134,7 @@ console.log(numeroeStr.toString());
 
 // Exercício 5 - Conversão para Booleano:
 // Converta o valor 0 para um booleano e imprima no console.
+
+let valore = 0
+let booleanoe2 = Boolean(valore);
+console.log(booleanoe2);
