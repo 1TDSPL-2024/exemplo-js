@@ -30,54 +30,72 @@
 // Exercício 1 - Declarando Variáveis:
 // Declare três variáveis diferentes (x, y, z) usando var, let e const, respectivamente. Em seguida, imprima o valor de cada variável no console.
 
-var x = 10;
-let y = 20;
-const z = 30;
-console.log(x);
-console.log(y);
-console.log(z);
+// var x = 10;
+// let y = 20;
+// const z = 30;
+// console.log(x);
+// console.log(y);
+// console.log(z);
 
 // Exercício 2 - Tipos de Dados:
 // Declare variáveis representando diferentes tipos de dados (número, string, booleano, array e objeto) e imprima cada uma delas no console.
 
-let num = 5;
-console.log(num);
+// let num = 5;
+// console.log(num);
 
-let str = "Olá Mundo!";
-console.log(str);
+// let str = "Olá Mundo!";
+// console.log(str);
 
-let bool = true;
-console.log(bool);
+// let bool = true;
+// console.log(bool);
 
-let arr = [1, 2, 3, 4, 5];
-console.log(arr);
+// let arr = [1, 2, 3, 4, 5];
+// console.log(arr);
 
-let obj = {nome: "Felipe", idade: 18, cidade: "São Paulo"}
-console.log(obj);
-console.log(obj.nome);
-console.log(obj.idade);
-console.log(obj.cidade);
+// let obj = {nome: "Felipe", idade: 18, cidade: "São Paulo"}
+// console.log(obj);
+// console.log(obj.nome);
+// console.log(obj.idade);
+// console.log(obj.cidade);
 
 // Exercício 3 - Conversão de String para Número:
 // Converta a string "25" em um número e imprima no console.
 
-let strNumero = "25";
-console.log(strNumero)
-let numero = parseInt(strNumero);
-console.log(numero);
+// let strNumero = "25";
+// console.log(strNumero)
+// let numero = parseInt(strNumero);
+// console.log(numero);
 
 
 // Exercício 4 - Conversão de Número para String:
 // Converta o número 30 em uma string e imprima no console.
 
-let numeroStr = 30;
-console.log(numeroStr);
-let strNumero2 = numeroStr.toString();
-console.log(strNumero2);
+// let numeroStr = 30;
+// console.log(numeroStr);
+// let strNumero2 = numeroStr.toString();
+// console.log(strNumero2);
 
 // Exercício 5 - Conversão para Booleano:
 // Converta o valor 0 para um booleano e imprima no console.
 
-let valor = 0;
-let booleano = Boolean(valor);
-console.log(booleano);
+// let valor = 0;
+// let booleano = Boolean(valor);
+// console.log(booleano);
+
+// Manipulação do DOM
+// Funções
+
+// Declarando funções clássica
+function soma(a,b) {
+    return a + b;
+}
+
+// Declarando funções anônimas
+let soma1 = function(a,b) {
+    return a + b;
+}
+
+// Recuperando o valor da função através de variável e imprimindo
+let resultado = soma(10,20);
+console.log(resultado)
+console.log(soma1(2, 2));
