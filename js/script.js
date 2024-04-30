@@ -61,9 +61,23 @@ console.log(obj.cidade);
 // Exercício 3 - Conversão de String para Número:
 // Converta a string "25" em um número e imprima no console.
 
+let strNumero = "25";
+console.log(strNumero)
+let numero = parseInt(strNumero);
+console.log(numero);
+
+
 // Exercício 4 - Conversão de Número para String:
 // Converta o número 30 em uma string e imprima no console.
+
+let numeroStr = 30;
+console.log(numeroStr);
+let strNumero2 = numeroStr.toString();
+console.log(strNumero2);
 
 // Exercício 5 - Conversão para Booleano:
 // Converta o valor 0 para um booleano e imprima no console.
 
+let valor = 0;
+let booleano = Boolean(valor);
+console.log(booleano);
