@@ -1,3 +1,5 @@
+# Flexbox
+- Flexbox: O Flexbox  é um modelo de layout CSS3 que permite organizar os elementos em uma linha ou coluna. Ele oferece a capacidade de organizar os itens em linhas ou colunas fácilmente e muito rápido com poucas instruções:
 # O que é Javascript
 - JavaScript é uma linguagem de programação interpretada.
 - Foi originalmente implementada como parte dos navegadores web para que scripts pudessem ser
@@ -13,3 +15,5 @@ em protótipos, [tipagem fraca], [dinâmica] e [funções de primeira classe].
 comumente indisponíveis em linguagens populares como [Java] e [C++].
 - É a linguagem de programação mais utilizada do mundo atualmente...
 
+## Exemplo:
+- [https://flexboxfroggy.com/](https://flexboxfroggy.com/)
