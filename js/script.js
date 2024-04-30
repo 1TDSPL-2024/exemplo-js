@@ -40,7 +40,23 @@ console.log(z);
 // Exercício 2 - Tipos de Dados:
 // Declare variáveis representando diferentes tipos de dados (número, string, booleano, array e objeto) e imprima cada uma delas no console.
 
+let num = 5;
+console.log(num);
 
+let str = "Olá Mundo!";
+console.log(str);
+
+let bool = true;
+console.log(bool);
+
+let arr = [1, 2, 3, 4, 5];
+console.log(arr);
+
+let obj = {nome: "Felipe", idade: 18, cidade: "São Paulo"}
+console.log(obj);
+console.log(obj.nome);
+console.log(obj.idade);
+console.log(obj.cidade);
 
 // Exercício 3 - Conversão de String para Número:
 // Converta a string "25" em um número e imprima no console.
