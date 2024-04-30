@@ -110,3 +110,19 @@ console.log(booleano); // Saída: false (0 é considerado false)
 
 // Exercício 5 - Conversão para Booleano:
 // Converta o valor 0 para um booleano e imprima no console.
+
+
+
+// RESOLUÇÃO 
+// EX1
+
+const x = 10;
+var y = 20;
+let z = 30;
+
+console.log("Valor de x: ", x)
+console.log("valor de y: ", y)
+console.log("Valor de z: ", z)
+
+
+
