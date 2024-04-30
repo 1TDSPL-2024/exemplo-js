@@ -110,3 +110,19 @@ console.log(booleano); // Saída: false (0 é considerado false)
 
 // Exercício 5 - Conversão para Booleano:
 // Converta o valor 0 para um booleano e imprima no console.
+
+// MANIPULAÇÃO DO DOM
+// Funções
+function soma(a, b){
+    return a + b;
+}
+
+//Função anônima
+let soma1 = function(a, b){
+    return a + b;
+}
+
+//Recuperando o valor da função
+let resultado = soma(10,20);
+console.log(resultado);
+console.log(soma1(2,2));
