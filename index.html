@@ -12,7 +12,7 @@
 </head>
 
 <body>
-
+    
     <header id="topo">
         <h1 id="titulo">JavaScript</h1>
         <nav>
@@ -24,11 +24,35 @@
         </nav>
     </header>
 
-    <button onclick="console.log('Clique no botão.')">CLICK</button>
+    <div>
+        <h2>VALIDAÇÃO</h2>
+        <div>
+            <span class="valida"></span>
+        </div>
+        <div>
+            <form action="#" method="post" onsubmit="return false">
+                <fieldset>
+                    <legend>LOGIN</legend>
+                    <div>
+                        <label for="idEmail">Email</label>
+                        <input type="email" name="txtEmail" id="idEmail" placeholder="Digite seu email">
+                    </div>
+                    <div>
+                        <label for="idSenha">Senha</label>
+                        <input type="password" name="txtSenha" id="idSenha" placeholder="Digite sua senha">
+                    </div>
+                    <div>
+                        <input type="checkbox" name="txtLembrar" id="idLembrar" value="lembrete" checked>
+                        <label for="idLembrar">Lembrar-me</label>
+                    </div>
+                    <div>
+                        <button type="submit">Enviar</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
 
-    <button id="btn">CLICK-2</button>
-
-
-
+            
 </body>                     
 </html>
