@@ -140,15 +140,83 @@
 //Funçoes
 
 //Declarando funções clássica
-function soma(a, b) {
-  return a + b;
-}
+//function soma(a, b) {
+//  return a + b;
+//}
 //Declarando funções anônimas
- let soma1 = function(a, b) {
-   return a + b;
- }
+// let soma1 = function(a, b) {
+//  return a + b;
+// }
 
 //Recuperando o valor da função através de variável e imprimindo!
-let resultado = soma(10, 20);
-console.log(resultado);
-console.log(soma1(2,2));
+//let resultado = soma(10, 20);
+//console.log(resultado);
+//console.log(soma1(2,2));
+
+
+//Criar uma lista de usuários
+
+let listaUsuarios = [
+  {emailUsuario:"jose@emai.com", senhaUsuario:"123456"},
+  {emailUsuario:"geraldo@emai.com", senhaUsuario:"654321"},
+  {emailUsuario:"manoel@emai.com", senhaUsuario:"123123"},
+  {emailUsuario:"miguel@emai.com", senhaUsuario:"111111"},
+  {emailUsuario:"erick@emai.com", senhaUsuario:"121212"},
+];
+//console.log("Listagem dos Usuários");
+//for (let x = 0; x < listaUsuarios.lenght; x++) {
+//  console.log(listaUsuarios[x].emailUsuario);
+//}
+
+//let usuario = {
+//  email:"email",
+//  senha:"senha"
+//}
+
+//listaUsuarios.forEach(function(u){
+//  if(u.emailUsuario === usuario.email){
+//    console.log("Email Encontrado!");
+//  }
+//});
+
+const btnSubmit = document.querySelector("button[type=submit]");
+//Adcionando um evento ao botão submit
+btnSubmit.addEventListener("click",function(){
+  //Recuperando os dados dos inputs dos usuários:
+  let email = document.querySelector("input[type=email]").value;
+  let senha = document.querySelector("input[type=password]").value;
+
+  //Criando o objeto que vai guardar os dados que será digitado no form.
+  let usuario = {
+    email : "",
+    senha : ""
+  }
+
+  //Populando o objeto com os dados do form
+  usuario.email = email;
+  usuario.senha = senha;
+
+  const msg = document.querySelector(".valida");
+
+  //Criando sistema de validação com loop.
+  for (let x = 0; x < listaUsuarios.length; x++){
+
+    if((usuario.email === listaUsuarios[x].emailUsuario) && (usuario.senha === listaUsuarios[x].senhaUsuario)){
+      
+      msg.textContent = "Login validado com sucesso!"
+      msg.setAttribute("class","sucess");
+      setTimeout(()=>{
+        msg.setAttribute("class","valida");
+      }, 5000);
+    
+      return true;
+    }
+  }
+
+  msg.textContent = "Login ou senha inválidos!"
+  msg.setAttribute("class","error");
+  setTimeout(()=>{
+    msg.setAttribute("class","valida");
+  }, 5000);
+
+})

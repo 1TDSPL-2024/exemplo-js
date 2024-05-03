@@ -2,25 +2,29 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-<<<<<<< HEAD
-    
 }
 
-#cabecalho{
-  display: flex;
-  justify-content: space-between;
-
-  h1{
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 200px;
-  }
-
-=======
+button[type="submit"]{
+  display: inline-block;
+  width: 10vw;
+  height: 15vh;
+  font-weight: 700;
+  color: #fff;
+  background-color: #075f0b;
+  border: none;
+  border-radius: 5px;
 }
 
-#cabecalho{
-    background-color: aquamarine;
-    height: 190px;
->>>>>>> 7b437d9ba520a2ab22f1417b03e772dd0841151a
+.sucess{
+  display: block;
+  color: #075f0b;
+  font-weight: 700;
+  background-color: #57995a;
+}
+
+.error{
+  display: block;
+  color: #ff0000;
+  font-weight: 700;
+  background-color: #ff3030;
 }
