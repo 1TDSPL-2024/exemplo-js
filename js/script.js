@@ -86,16 +86,79 @@
 // Funções
 
 // Declarando funções clássica
-function soma(a,b) {
-    return a + b;
-}
+// function soma(a,b) {
+//     return a + b;
+// }
 
 // Declarando funções anônimas
-let soma1 = function(a,b) {
-    return a + b;
-}
+// let soma1 = function(a,b) {
+//     return a + b;
+// }
 
 // Recuperando o valor da função através de variável e imprimindo
-let resultado = soma(10,20);
-console.log(resultado)
-console.log(soma1(2, 2));
+// let resultado = soma(10,20);
+// console.log(resultado)
+// console.log(soma1(2, 2));
+
+// Criar uma lista de usuarios
+
+let listaUsuarios = [
+    {emailUsuario: "felipe@email.com", senhaUsuario: "123456"},
+    {emailUsuario: "jose@email.com", senhaUsuario: "123456"},
+    {emailUsuario: "anna@email.com", senhaUsuario: "123456"},
+    {emailUsuario: "pedro@email.com", senhaUsuario: "123456"},
+    {emailUsuario: "arthur@email.com", senhaUsuario: "123456"},
+];
+// let usuario = {
+//     email:"jose@email.com",
+//     senha:"senha"
+//   }
+
+// for (let x = 0; x < listaUsuarios.length; x++) {
+//     if(u.emailUsuario === usuario.email){
+//     console.log("Email Encontrado!");
+//   }
+// }
+
+const btnSubmit = document.querySelector("button[type=submit]");
+//Adicionando um evento ao botão submit.
+btnSubmit.addEventListener("click",function(){
+  //Recuperando os dados dos inputs dos usuários:
+  let email = document.querySelector("input[type=email]").value;
+  let senha = document.querySelector("input[type=password]").value;
+
+  //criando o obejto que vai guardar os dados que será digitado no form
+  let usuario = {
+    email : "",
+    senha : "",
+  }
+
+  //populando o objeto com os dados do form
+  usuario.email = email;
+  usuario.senha = senha;
+
+  //criando sistema de validação com loop
+  const msg = document.querySelector(".valida");
+  for (let x = 0; x < listaUsuarios.length; x++) {
+    if ((usuario.email === listaUsuarios[x].emailUsuario) && (usuario.senha === listaUsuarios[x].senhaUsuario)) {
+        
+        const msg = document.querySelector(".valida");
+        
+        msg.textContent = "Login validado com sucesso!";
+      msg.setAttribute("class","sucess");
+      setTimeout(()=>{
+        msg.setAttribute("class","valida");
+      }, 5000);
+      return true;
+    }
+
+  }
+
+  msg.textContent = "Login ou senha inválidos!";
+  msg.setAttribute("class","error");
+  setTimeout(()=>{
+    msg.setAttribute("class","valida");
+  }, 5000);
+
+})
+
