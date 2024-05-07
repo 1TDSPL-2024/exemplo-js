@@ -200,10 +200,15 @@ btnSubmit.addEventListener("click",function(){
       
       msg.textContent = "Login validado com sucesso!";
       msg.setAttribute("class","sucess");
+
+      //Salvando o objeto usuário no LocalStorage.
+      localStorage.setItem("usuario-logado", JSON.stringify(usuario));
+
       setTimeout(()=>{
         msg.setAttribute("class","valida");
+        window.location.href = "../status/sucesso.html";
       }, 5000);
-      return true;
+      return false;
     }
 
   }
@@ -212,8 +217,9 @@ btnSubmit.addEventListener("click",function(){
   msg.setAttribute("class","error");
   setTimeout(()=>{
     msg.setAttribute("class","valida");
+    window.location.href = "../status/erro.html";
   }, 5000);
-  
+   return false
 })
 
 
