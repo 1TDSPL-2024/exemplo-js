@@ -140,83 +140,152 @@
 //Funçoes
 
 //Declarando funções clássica
-//function soma(a, b) {
-//  return a + b;
-//}
-//Declarando funções anônimas
-// let soma1 = function(a, b) {
-//  return a + b;
+// function soma(a, b) {
+//   return a + b;
 // }
+// //Declarando funções anônimas
+//  let soma1 = function(a, b) {
+//    return a + b;
+//  }
 
-//Recuperando o valor da função através de variável e imprimindo!
-//let resultado = soma(10, 20);
-//console.log(resultado);
-//console.log(soma1(2,2));
+// //Recuperando o valor da função através de variável e imprimindo!
+// let resultado = soma(10, 20);
+// console.log(resultado);
+// console.log(soma1(2,2));
 
 
 //Criar uma lista de usuários
 
 let listaUsuarios = [
-  {emailUsuario:"jose@emai.com", senhaUsuario:"123456"},
-  {emailUsuario:"geraldo@emai.com", senhaUsuario:"654321"},
-  {emailUsuario:"manoel@emai.com", senhaUsuario:"123123"},
-  {emailUsuario:"miguel@emai.com", senhaUsuario:"111111"},
-  {emailUsuario:"erick@emai.com", senhaUsuario:"121212"},
+  {emailUsuario:"jose@email.com",senhaUsuario:"123456"},
+  {emailUsuario:"joaquim@email.com",senhaUsuario:"123456"},
+  {emailUsuario:"maria@email.com",senhaUsuario:"123456"},
+  {emailUsuario:"manoel@email.com",senhaUsuario:"123456"},
+  {emailUsuario:"roberto@email.com",senhaUsuario:"123456"},
 ];
-//console.log("Listagem dos Usuários");
-//for (let x = 0; x < listaUsuarios.lenght; x++) {
-//  console.log(listaUsuarios[x].emailUsuario);
-//}
 
-//let usuario = {
-//  email:"email",
-//  senha:"senha"
-//}
+const apresentaSenha = (input2)=>{
+  if(input2.type == "password"){
+    input2.setAttribute("type","text");
+  }else{
+    input2.setAttribute("type","password");
+  }
+}
 
-//listaUsuarios.forEach(function(u){
-//  if(u.emailUsuario === usuario.email){
-//    console.log("Email Encontrado!");
-//  }
-//});
 
-const btnSubmit = document.querySelector("button[type=submit]");
-//Adcionando um evento ao botão submit
-btnSubmit.addEventListener("click",function(){
-  //Recuperando os dados dos inputs dos usuários:
-  let email = document.querySelector("input[type=email]").value;
-  let senha = document.querySelector("input[type=password]").value;
+let eyeIcon = document.querySelector("i");
+const inputSenha = document.querySelector("#idSenha");
+eyeIcon.addEventListener("click", ()=>{
+  if(eyeIcon.className == "fa-regular fa-eye-slash"){
+    eyeIcon.setAttribute("class","fa-regular fa-eye");
+    apresentaSenha(inputSenha);
+  }else{
+    eyeIcon.setAttribute("class","fa-regular fa-eye-slash");
+    apresentaSenha(inputSenha);
+  }
+});
+
+
+function validaLogin(input1,input2,event){
+  
+  event.preventDefault();
 
   //Criando o objeto que vai guardar os dados que será digitado no form.
   let usuario = {
-    email : "",
-    senha : ""
+    email : input1.value,
+    senha : input2.value
   }
-
-  //Populando o objeto com os dados do form
-  usuario.email = email;
-  usuario.senha = senha;
 
   const msg = document.querySelector(".valida");
 
   //Criando sistema de validação com loop.
-  for (let x = 0; x < listaUsuarios.length; x++){
+  for (let x = 0; x < listaUsuarios.length; x++) {
 
     if((usuario.email === listaUsuarios[x].emailUsuario) && (usuario.senha === listaUsuarios[x].senhaUsuario)){
       
-      msg.textContent = "Login validado com sucesso!"
+      msg.textContent = "Login validado com sucesso!";
       msg.setAttribute("class","sucess");
+
+      //Salvando o objeto usuário no LocalStorage.
+      localStorage.setItem("usuario-logado", JSON.stringify(usuario));
+
       setTimeout(()=>{
         msg.setAttribute("class","valida");
+        window.location.href = "../status/sucesso.html";
       }, 5000);
-    
       return true;
     }
+
   }
 
-  msg.textContent = "Login ou senha inválidos!"
+  msg.textContent = "Login ou senha inválidos!";
   msg.setAttribute("class","error");
   setTimeout(()=>{
     msg.setAttribute("class","valida");
+    window.location.href = "../status/erro.html";
   }, 5000);
+   return false
 
-})
+}
+
+
+
+
+
+
+
+// const btnSubmit = document.querySelector("button[type=submit]");
+// //Adicionando um evento ao botão submit.
+// btnSubmit.addEventListener("click",function(){
+//   //Recuperando os dados dos inputs dos usuários:
+//   let email = document.querySelector("input[type=email]").value;
+//   let senha = document.querySelector("input[type=password]").value;
+
+//   //Criando o objeto que vai guardar os dados que será digitado no form.
+//   let usuario = {
+//     email : "",
+//     senha : ""
+//   }
+
+//   //Populando o objeto com os dados do form.
+//   usuario.email = email;
+//   usuario.senha = senha;
+
+//   const msg = document.querySelector(".valida");
+
+//   //Criando sistema de validação com loop.
+//   for (let x = 0; x < listaUsuarios.length; x++) {
+
+//     if((usuario.email === listaUsuarios[x].emailUsuario) && (usuario.senha === listaUsuarios[x].senhaUsuario)){
+      
+//       msg.textContent = "Login validado com sucesso!";
+//       msg.setAttribute("class","sucess");
+
+//       //Salvando o objeto usuário no LocalStorage.
+//       localStorage.setItem("usuario-logado", JSON.stringify(usuario));
+
+//       setTimeout(()=>{
+//         msg.setAttribute("class","valida");
+//         window.location.href = "../status/sucesso.html";
+//       }, 5000);
+//       return false;
+//     }
+
+//   }
+
+//   msg.textContent = "Login ou senha inválidos!";
+//   msg.setAttribute("class","error");
+//   setTimeout(()=>{
+//     msg.setAttribute("class","valida");
+//     window.location.href = "../status/erro.html";
+//   }, 5000);
+//    return false
+// })
+
+
+
+// for (let x = 0; x < listaUsuarios.length; x++) {
+//   if(u.emailUsuario === usuario.email){
+//     console.log("Email Encontrado!");  
+//   }
+// }
