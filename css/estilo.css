@@ -5,14 +5,15 @@
 }
 
 button[type="submit"]{
-  display: inline-block;
+  display: block;
   width: 10vw;
-  height: 6vh;
+  height: 7vh;
   font-weight: 700;
   color: #fff;
   background-color: #075f0b;
   border:none;
   border-radius: 5px;
+  margin: 3% auto;
 }
 
 .sucess{
@@ -27,4 +28,9 @@ button[type="submit"]{
   color: #960303;
   font-weight: 700;
   background-color:#aa4d4d ;
+}
+
+.fa-regular{
+  cursor: pointer;
+  user-select: none;
 }
