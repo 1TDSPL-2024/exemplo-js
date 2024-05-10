@@ -172,7 +172,6 @@ const apresentaSenha = (input2)=>{
   }
 }
 
-
 let eyeIcon = document.querySelector("i");
 const inputSenha = document.querySelector("#idSenha");
 eyeIcon.addEventListener("click", ()=>{
@@ -208,6 +207,10 @@ function validaLogin(input1,input2,event){
 
       //Salvando o objeto usuário no LocalStorage.
       localStorage.setItem("usuario-logado", JSON.stringify(usuario));
+
+      //Criando um token de autenticação;
+      const tokenUser = (Math.random().toString(16).substring(2)+Math.random().toString(16).substring(2));
+      sessionStorage.setItem("token",tokenUser);
 
       setTimeout(()=>{
         msg.setAttribute("class","valida");
