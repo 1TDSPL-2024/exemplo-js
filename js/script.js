@@ -212,6 +212,13 @@ function validaLogin(input1,input2,event){
       //Salvando o objeto usuário no LocalStorage.
       localStorage.setItem("usuario-logado", JSON.stringify(usuario));
 
+      //criando um token de autenticação do usuário
+      const tokenUser = (Math.random().toString(16).substring(2)+Math.random().toString(16).substring(2));
+      sessionStorage.setItem("token",tokenUser);
+
+
+
+
       setTimeout(()=>{
         msg.setAttribute("class","valida");
         window.location.href = "../status/sucesso.html";
