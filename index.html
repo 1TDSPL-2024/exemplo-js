@@ -15,7 +15,7 @@
 
 <body>
     
-    <header id="topo">
+    <!-- <header id="topo">
         <h1 id="titulo">JavaScript</h1>
         <nav>
             <ul> 
@@ -24,44 +24,70 @@
                 <li class="link"><a href="#">C#</a></li>
             </ul>
         </nav>
-    </header>
+    </header> -->
 
-    <div>
-        <h2>VALIDAÇÃO</h2>
         <div>
+          <h2>VALIDAÇÃO</h2>
+    
+          <button id="openModal">ABRIR-MODAL</button>
+    
+          <dialog>
+            <button id="closeModal">X</button>
+          <div>
             <span class="valida"></span>
-        </div>
-        <div>
-            <form action="#" method="get" onsubmit="return validaLogin(idEmail,idSenha,event)">
-                <fieldset>
-                    <legend>LOGIN</legend>
-                    <div class="form-group">
-                    <div>
-                        <label for="idEmail">Email</label>
-                        <input type="email" name="txtEmail" id="idEmail" placeholder="Digite seu email">
-                    </div>
-                    <div>
-                        <label for="idSenha">Senha</label>
-                        <input type="password" name="txtSenha" id="idSenha" placeholder="Digite sua senha">
-                        <i class="fa-regular fa-eye-slash"></i>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="txtLembrar" id="idLembrar" value="lembrete" checked>
-                        <label for="idLembrar">Lembrar-me</label>
-                    </div>
-                    <div>
-                        <button type="submit">Enviar</button>
-                    </div>
+          </div>
+          <div>
+            <form
+              action="#"
+              method="get"
+              onsubmit="return validaLogin(idEmail,idSenha, event)"
+            >
+              <fieldset>
+                <legend>LOGIN</legend>
+                <div class="form-group">
+                  <div>
+                    <label for="idEmail">Email</label>
+                    <input
+                      type="email"
+                      name="txtEmail"
+                      id="idEmail"
+                      placeholder="Digite seu email"
+                    />
+                  </div>
+                  <div>
+                    <label for="idSenha">Senha</label>
+                    <input
+                      type="password"
+                      name="txtSenha"
+                      id="idSenha"
+                      placeholder="Digite sua senha"
+                    />
+                    <i class="fa-regular fa-eye-slash"></i>
+                  </div>
+                  <div>
+                    <input
+                      type="checkbox"
+                      name="txtLembrar"
+                      id="idLembrar"
+                      value="lembrete"
+                      checked
+                    />
+                    <label for="idLembrar">Lembrar-me</label>
+                  </div>
+                  <div>
+                    <button type="submit">Enviar</button>
+                  </div>
                 </div>
-                </fieldset>
-                
-                <div>
-                    <p>Ainda não possui Login - <a href="./cadastro/cadastro.html">Clique aqui</a></p>
-                </div>
+              </fieldset>
+              <div>
+                <p>
+                  Ainda não possui Login -
+                  <a href="./cad/cadastro.html">Clique aqui</a>
+                </p>
+              </div>
             </form>
+          </div>
         </div>
-    </div>
-
-            
-</body>                     
+    </dialog>
+      </body>
 </html>

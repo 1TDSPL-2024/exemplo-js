@@ -76,3 +76,19 @@ background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
 }
+
+dialog{
+  width: 70%;
+  overflow: hidden;
+  border: none;
+  margin: 0% auto;
+}
+
+dialog::backdrop{
+  background-color: rgba(0,0,0, .8);
+}
+
+dialog > div{
+  width: 100%;
+  margin: 5% auto;
+}
