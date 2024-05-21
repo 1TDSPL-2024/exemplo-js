@@ -157,7 +157,7 @@
 //Criar uma lista de usuários
 
 let listaUsuarios = [
-  {emailUsuario:"felipe@email.com",senhaUsuario:"123456"},
+  {emailUsuario:"jose@email.com",senhaUsuario:"123456"},
   {emailUsuario:"joaquim@email.com",senhaUsuario:"123456"},
   {emailUsuario:"maria@email.com",senhaUsuario:"123456"},
   {emailUsuario:"manoel@email.com",senhaUsuario:"123456"},
@@ -166,32 +166,41 @@ let listaUsuarios = [
 
 const apresentaSenha = (input2)=>{
   if(input2.type == "password"){
-    input2.setAttribute("type", "text");
+    input2.setAttribute("type","text");
   }else{
-    input2.setAttribute("type", "password");
+    input2.setAttribute("type","password");
   }
 }
-
 
 let eyeIcon = document.querySelector("i");
 const inputSenha = document.querySelector("#idSenha");
 eyeIcon.addEventListener("click", ()=>{
-
   if(eyeIcon.className == "fa-regular fa-eye-slash"){
-    eyeIcon.setAttribute("class", "fa-regular fa-eye");
+    eyeIcon.setAttribute("class","fa-regular fa-eye");
     apresentaSenha(inputSenha);
-
-
   }else{
-    eyeIcon.setAttribute("class", "fa-regular fa-eye-slash");
+    eyeIcon.setAttribute("class","fa-regular fa-eye-slash");
     apresentaSenha(inputSenha);
   }
 });
 
 
+
+
 function validaLogin(input1,input2,event){
-  
+
   event.preventDefault();
+
+    if(!localStorage.getItem("base")){
+      let baseUsuarios = [
+          {nome:"",sobrenome:"",dtNasc:"",email:"",senha:"",genero:""}
+      ]
+      localStorage.setItem("base",JSON.stringify(baseUsuarios));
+      console.log("BASE-CRIADA");
+  }
+
+  //Recuperando o localStorage com a base de dados:
+  let listaUsuarios = JSON.parse(localStorage.getItem("base"));
 
   //Criando o objeto que vai guardar os dados que será digitado no form.
   let usuario = {
@@ -204,20 +213,17 @@ function validaLogin(input1,input2,event){
   //Criando sistema de validação com loop.
   for (let x = 0; x < listaUsuarios.length; x++) {
 
-    if((usuario.email === listaUsuarios[x].emailUsuario) && (usuario.senha === listaUsuarios[x].senhaUsuario)){
+    if((usuario.email === listaUsuarios[x].email) && (usuario.senha === listaUsuarios[x].senha)){
       
       msg.textContent = "Login validado com sucesso!";
       msg.setAttribute("class","sucess");
 
       //Salvando o objeto usuário no LocalStorage.
-      localStorage.setItem("usuario-logado", JSON.stringify(usuario));
+      localStorage.setItem("usuario-logado", JSON.stringify(listaUsuarios[x]));
 
-      //criando um token de autenticação do usuário
+      //Criando um token de autenticação;
       const tokenUser = (Math.random().toString(16).substring(2)+Math.random().toString(16).substring(2));
       sessionStorage.setItem("token",tokenUser);
-
-
-
 
       setTimeout(()=>{
         msg.setAttribute("class","valida");
@@ -300,6 +306,7 @@ function validaLogin(input1,input2,event){
 //   }
 // }
 
+
 const openModal = document.querySelector("#openModal");
 const modal = document.querySelector("dialog");
 
@@ -309,9 +316,9 @@ openModal.addEventListener("click", ()=>{
   modal.showModal();
 });
 
+//Encerrando a janela de Modal.
 const closeModal = document.querySelector("#closeModal");
-
 closeModal.addEventListener("click", ()=>{
-  //Utilizando o modal para fechar.
+  //Utilizando o modal para abrir.
   modal.close();
 });
