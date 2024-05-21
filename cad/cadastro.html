@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <title>JavaScript</title>
+
+    <script src="../js/script-cad.js" defer></script>
+
+</head>
+
+<body>
+    
+    <header id="topo">
+        <h1 id="titulo">JavaScript</h1>
+        <nav>
+            <ul> 
+                <li class="link"><a href="#">JavaScript</a></li>
+                <li class="link"><a href="#">Java</a></li>
+                <li class="link"><a href="#">C#</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div>
+        <h2>INFORMAÇÕES</h2>
+        <div>
+            <span class="valida"></span>
+        </div>
+        <div>
+            <form action="#" method="get" onsubmit="return cadastrar()">
+                <fieldset>
+                    <legend>Cadastro</legend>
+
+                    <fieldset>
+                        <legend>Info-Pessoais</legend>
+                        <div>
+                            <label for="idNome">Nome</label>
+                            <input type="text" name="txtNome" id="idNome" placeholder="Digite seu nome">
+                        </div>
+                        <div>
+                            <label for="idSNome">Sobrenome</label>
+                            <input type="text" name="txtSNome" id="idSNome" placeholder="Digite seu sobrenome">
+                        </div>
+                        <div>
+                            <label for="idDtNasc">Data Nascimento</label>
+                            <input type="date" name="txtDtNasc" id="idDtNasc">
+                        </div>    
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Informações de Acesso</legend>
+                        <div>
+                            <label for="idEmail">Email</label>
+                            <input type="email" name="txtEmail" id="idEmail" placeholder="Digite seu email">
+                        </div>
+                        <div>
+                            <label for="idSenha">Senha</label>
+                            <input type="password" name="txtSenha" id="idSenha" placeholder="Digite sua senha">
+                        </div>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <legend>Gênero</legend>
+                        <select name="genero" id="idGenero">
+                            <option value="0">Selecione uma opção</option>
+                            <option value="f">Feminino</option>
+                            <option value="m">Masculino</option>
+                            <option value="o">Outros</option>
+                        </select>
+                    </fieldset>
+                    
+                    <div>
+                        <button type="submit">Cadastrar</button>
+                    </div>
+                </fieldset>
+                <div>
+                    <p>Já possui Login - <a href="../index.html">Clique aqui</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+            
+</body>                     
+</html>
