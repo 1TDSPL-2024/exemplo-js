@@ -218,6 +218,80 @@ btnSubmit.addEventListener("click",function(){
 })
 
 
+// const btnSubmit = document.querySelector("button[type=submit]");
+// //Adicionando um evento ao botão submit.
+// btnSubmit.addEventListener("click",function(){
+//   //Recuperando os dados dos inputs dos usuários:
+//   let email = document.querySelector("input[type=email]").value;
+//   let senha = document.querySelector("input[type=password]").value;
+
+//   //Criando o objeto que vai guardar os dados que será digitado no form.
+//   let usuario = {
+//     email : "",
+//     senha : ""
+//   }
+
+//   //Populando o objeto com os dados do form.
+//   usuario.email = email;
+//   usuario.senha = senha;
+
+//   const msg = document.querySelector(".valida");
+
+//   //Criando sistema de validação com loop.
+//   for (let x = 0; x < listaUsuarios.length; x++) {
+
+//     if((usuario.email === listaUsuarios[x].emailUsuario) && (usuario.senha === listaUsuarios[x].senhaUsuario)){
+      
+//       msg.textContent = "Login validado com sucesso!";
+//       msg.setAttribute("class","sucess");
+
+//       //Salvando o objeto usuário no LocalStorage.
+//       localStorage.setItem("usuario-logado", JSON.stringify(usuario));
+
+//       setTimeout(()=>{
+//         msg.setAttribute("class","valida");
+//         window.location.href = "../status/sucesso.html";
+//       }, 5000);
+//       return false;
+//     }
+
+//   }
+
+//   msg.textContent = "Login ou senha inválidos!";
+//   msg.setAttribute("class","error");
+//   setTimeout(()=>{
+//     msg.setAttribute("class","valida");
+//     window.location.href = "../status/erro.html";
+//   }, 5000);
+//    return false
+// })
+
+
+
+// for (let x = 0; x < listaUsuarios.length; x++) {
+//   if(u.emailUsuario === usuario.email){
+//     console.log("Email Encontrado!");  
+//   }
+// }
+
+
+const openModal = document.querySelector("#openModal");
+const modal = document.querySelector("dialog");
+
+//Atrelando um evento de click no botão de abertura do MODAL.
+openModal.addEventListener("click", ()=>{
+  //Utilizando o modal para abrir.
+  modal.showModal();
+});
+
+//Encerrando a janela de Modal.
+const closeModal = document.querySelector("#closeModal");
+closeModal.addEventListener("click", ()=>{
+  //Utilizando o modal para abrir.
+  modal.close();
+});
+
+
 
 
 
