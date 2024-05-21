@@ -185,9 +185,22 @@ eyeIcon.addEventListener("click", ()=>{
 });
 
 
+
+
 function validaLogin(input1,input2,event){
-  
+
   event.preventDefault();
+
+    if(!localStorage.getItem("base")){
+      let baseUsuarios = [
+          {nome:"",sobrenome:"",dtNasc:"",email:"",senha:"",genero:""}
+      ]
+      localStorage.setItem("base",JSON.stringify(baseUsuarios));
+      console.log("BASE-CRIADA");
+  }
+
+  //Recuperando o localStorage com a base de dados:
+  let listaUsuarios = JSON.parse(localStorage.getItem("base"));
 
   //Criando o objeto que vai guardar os dados que será digitado no form.
   let usuario = {
@@ -200,13 +213,13 @@ function validaLogin(input1,input2,event){
   //Criando sistema de validação com loop.
   for (let x = 0; x < listaUsuarios.length; x++) {
 
-    if((usuario.email === listaUsuarios[x].emailUsuario) && (usuario.senha === listaUsuarios[x].senhaUsuario)){
+    if((usuario.email === listaUsuarios[x].email) && (usuario.senha === listaUsuarios[x].senha)){
       
       msg.textContent = "Login validado com sucesso!";
       msg.setAttribute("class","sucess");
 
       //Salvando o objeto usuário no LocalStorage.
-      localStorage.setItem("usuario-logado", JSON.stringify(usuario));
+      localStorage.setItem("usuario-logado", JSON.stringify(listaUsuarios[x]));
 
       //Criando um token de autenticação;
       const tokenUser = (Math.random().toString(16).substring(2)+Math.random().toString(16).substring(2));
