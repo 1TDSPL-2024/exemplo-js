@@ -4,27 +4,109 @@
   box-sizing: border-box;
 }
 
-button[type="submit"]{
-display: inline-block;
-width: 10vw;
-height: 15vh;
-font-weight: 700;
-color: #fff;
-background-color: #075f0b;
-border:none;
-border-radius: 5px;
-}
-
 .sucess{
-  display: block;
-  color:#075f0b;
-  font-weight: 700;
-  background-color: #57995a;
+display: block;
+color:#075f0b;
+font-weight: 700;
+background-color: #57995a;
 }
 
 .error{
-  display: block;
-  color:#ff0000;
-  font-weight: 700;
-  background-color: #ce4d4d;
+display: block;
+color:#e70c0c;
+font-weight: 700;
+background-color: #cf5858;
+}
+
+.fa-regular{
+cursor: pointer;
+user-select: none;
+margin-top: 1.5%;
+}
+
+.form-group{
+display: flex;
+flex-direction: column;
+width: 50vw;
+height: 70vh;
+margin: 0 auto;
+color: #fff;
+}
+
+.form-group div{
+margin: 3% 0;
+}
+
+.form-group input[type=email],input[type=password],input[type=text]{
+display: block;
+width: 50vw;
+height: 10vh;
+border-radius: 5px;
+border: none;
+box-shadow: inset 0 0 10px rgba(0,0,0, .8);
+padding-left: 10px;
+outline-color: #c0c1c0;
+font-size: 1rem;
+}
+
+button[type="submit"]{
+display: block;
+width: 25vw;
+height: 10vh;
+border-radius: 5px;
+border: none;
+background-color: #29427d;
+box-shadow: inset 0 0 10px rgba(0,0,0, .8);
+padding-left: 10px;
+outline-color: #c0c1c0;
+margin: 0 auto;
+color: #fff;
+font-weight: bold;
+transition: all .4s ease;
+font-size: 1rem;
+}
+
+button[type="submit"]:hover{
+box-shadow: inset 0 0 10px rgba(215, 212, 212, 0.8);
+}
+
+form{
+background-image: url("../img/back-login-640×423.jpg");
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+dialog{
+overflow: hidden;
+border: none;
+width: 70%;
+margin: 0 auto;
+}
+
+dialog::backdrop{
+background-color: rgba(0,0,0, .8);
+}
+
+dialog > div{
+width: 100%;
+margin: 5% auto; 
+}
+
+#openModal, #closeModal{
+display: block;
+margin:2% 0 0 2%;
+width: 10vw;
+height: 5vh;
+border:2px solid #c0c1c0;
+border-radius: 5px;
+}
+
+#closeModal{
+float: right;
+margin:2% 2% 0 0;
+border-radius: 100%;
+width: 3vw;
+height: 6vh;
+font-weight: bold;
 }
